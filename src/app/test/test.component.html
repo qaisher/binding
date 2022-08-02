@@ -1,0 +1,31 @@
+<p>Welcome {{ name }}</p>
+<h1>Length of {{name.toUpperCase()}} is {{ name.length}}.</h1>
+<h2>Site Url is {{siteUrl}}.</h2>
+<h5>{{greet()}}</h5>
+
+<!--Property binding-->
+
+<input [id] = "myId" type="text" value="Qaisher"> <!--using interpolation here, works fine because myId has string value-->
+<input type="text" value="Male" [disabled] = "isDisabled" > <!--cannot use interpolation because isDisabled has boolean value-->
+
+
+<!--Class binding-->
+
+<h4 class={{successClass}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et autem error culpa est quod dolore debitis consequatur, accusantium enim.</h4>
+
+<h4 [class] = "successClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et autem error culpa est quod dolore debitis consequatur, accusantium enim.</h4>
+
+<h3 [class.text-danger] = "hasError">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, itaque.</h3>
+
+<!--Binding multiple classes-->
+
+<h3 [ngClass] = "messageClasses">Lorem ipsum dolor sit amet.</h3>
+
+
+<!--Style Binding-->
+
+<h2 [style.color] = "'coral'">Style Binding Example</h2>
+<h5 [style.color] = "hasError ? 'red' : 'green'">This sentence color depends on hasError property.</h5>
+
+<h4 [ngStyle]="messageStyles">This has messageStyles object style.</h4>
+
