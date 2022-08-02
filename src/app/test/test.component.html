@@ -29,3 +29,17 @@
 
 <h4 [ngStyle]="messageStyles">This has messageStyles object style.</h4>
 
+
+<!--Event binding-->
+
+<button (click) = "onClick($event)">Greet</button>
+{{greetings}}
+<button (click) ="logMessage()">Show Message</button>
+{{message}}
+
+
+<!--Template Reference Variable-->
+
+<input type="text" #email value="abc@mail">
+<button type="button" (click)="showEmail(email.value)">Show Email</button>
+

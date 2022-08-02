@@ -16,6 +16,10 @@ export class TestComponent implements OnInit {
   public hasError = true;
   public isSpecial = true;
 
+  public greetings = "";
+  public message = "";
+  
+
   public messageClasses = {
     "text-success" : !this.hasError,
     "text-danger" : this.hasError,
@@ -30,6 +34,21 @@ export class TestComponent implements OnInit {
 
   public greet(){
     return 'Hello ' + this.name + '. You are at ' + this.siteUrl;
+  }
+
+  onClick(event:object) {
+    console.log('Welcome to Localhost.');
+    this.greetings = "Welcome User.";
+    console.log(event);
+   
+  }
+
+  logMessage() {
+    this.message = "This message has been logged as a result of the button click.";
+  }
+
+  showEmail(value: any) {
+    console.log(value);
   }
 
   constructor() { }
