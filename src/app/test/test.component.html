@@ -43,3 +43,9 @@
 <input type="text" #email value="abc@mail">
 <button type="button" (click)="showEmail(email.value)">Show Email</button>
 
+
+<!--Two way binding-->
+
+<input type="text" [(ngModel)] = "ngModelMessage">
+{{ngModelMessage}}
+

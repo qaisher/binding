@@ -18,8 +18,10 @@ export class TestComponent implements OnInit {
 
   public greetings = "";
   public message = "";
-  
 
+  public ngModelMessage = "";
+  
+  
   public messageClasses = {
     "text-success" : !this.hasError,
     "text-danger" : this.hasError,
